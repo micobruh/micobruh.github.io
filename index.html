@@ -163,6 +163,25 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+  
+    window.addEventListener('load', function () {
+      const badge = document.getElementById('linkedin-badge');
+      const fallback = document.getElementById('linkedin-badge-fallback');
+  
+      setTimeout(function () {
+        const hasRenderedBadge =
+          badge &&
+          (
+            badge.querySelector('iframe') ||
+            badge.querySelector('object') ||
+            badge.offsetHeight > 120
+          );
+  
+        if (!hasRenderedBadge && fallback) {
+          fallback.hidden = false;
+        }
+      }, 2500);
+    });
   </script>
 </body>
 </html>
