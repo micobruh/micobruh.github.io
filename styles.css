@@ -89,6 +89,12 @@ main {
   border-radius: var(--radius);
 }
 
+.LI-profile-badge {
+  display: block;
+  min-width: 250px;
+  min-height: 300px;
+}
+
 .hero-copy {
   padding: clamp(32px, 7vw, 72px);
   display: flex;
