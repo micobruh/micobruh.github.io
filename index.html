@@ -130,7 +130,7 @@
         </div>
       </div>
 
-      <div class="linkedin-badge-wrap" aria-label="LinkedIn public profile badge">
+      <div class="linkedin-badge-wrap" id="linkedin-badge-wrap">
         <div class="badge-base LI-profile-badge"
              data-locale="en_US"
              data-size="medium"
@@ -138,11 +138,25 @@
              data-type="VERTICAL"
              data-vanity="cheuk-lam-marco-mo"
              data-version="v1">
-          <a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/cheuk-lam-marco-mo/">Marco Mo on LinkedIn</a>
+          <a class="badge-base__link LI-simple-link"
+             href="https://www.linkedin.com/in/cheuk-lam-marco-mo">
+            Marco Mo
+          </a>
         </div>
+        <p class="badge-note badge-fallback" id="linkedin-badge-fallback">
+          The LinkedIn badge could not be loaded here. You can still view my profile directly:
+          <a href="https://www.linkedin.com/in/cheuk-lam-marco-mo" target="_blank" rel="noopener">
+            linkedin.com/in/cheuk-lam-marco-mo
+          </a>
+        </p>
+      
         <noscript>
-          <p class="badge-note">JavaScript is disabled, so the LinkedIn badge cannot load. Use the LinkedIn link above instead.</p>
-        </noscript>
+          <p class="badge-note">
+            JavaScript is disabled, so the LinkedIn badge cannot load. You can still view my profile directly:
+            <a href="https://www.linkedin.com/in/cheuk-lam-marco-mo" target="_blank" rel="noopener">
+              linkedin.com/in/cheuk-lam-marco-mo
+            </a>
+          </p>
       </div>
     </section>
   </main>
@@ -154,5 +168,23 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+
+  <script>
+    window.addEventListener("load", function () {
+      const badgeWrap = document.getElementById("linkedin-badge-wrap");
+      const fallback = document.getElementById("linkedin-badge-fallback");
+  
+      if (!badgeWrap || !fallback) return;
+  
+      setTimeout(function () {
+        const iframe = badgeWrap.querySelector("iframe");
+        const renderedBadge = badgeWrap.querySelector(".LI-badge-container");
+  
+        if (!iframe && !renderedBadge) {
+          fallback.style.display = "block";
+        }
+      }, 3000);
+    });
+  </script>  
 </body>
 </html>
