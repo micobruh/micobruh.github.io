@@ -139,10 +139,14 @@
              data-vanity="cheuk-lam-marco-mo"
              data-version="v1">
           <a class="badge-base__link LI-simple-link"
-             href="https://www.linkedin.com/in/cheuk-lam-marco-mo">
+             id="linkedin-original-link"
+             href="https://www.linkedin.com/in/cheuk-lam-marco-mo"
+             target="_blank"
+             rel="noopener">
             Marco Mo
           </a>
         </div>
+      
         <p class="badge-note badge-fallback" id="linkedin-badge-fallback">
           The LinkedIn badge could not be loaded here. You can still view my profile directly:
           <a href="https://www.linkedin.com/in/cheuk-lam-marco-mo" target="_blank" rel="noopener">
@@ -157,6 +161,7 @@
               linkedin.com/in/cheuk-lam-marco-mo
             </a>
           </p>
+        </noscript>
       </div>
     </section>
   </main>
@@ -171,20 +176,22 @@
 
   <script>
     window.addEventListener("load", function () {
-      const badgeWrap = document.getElementById("linkedin-badge-wrap");
+      const originalLink = document.getElementById("linkedin-original-link");
       const fallback = document.getElementById("linkedin-badge-fallback");
   
-      if (!badgeWrap || !fallback) return;
+      if (!originalLink || !fallback) return;
   
       setTimeout(function () {
-        const iframe = badgeWrap.querySelector("iframe");
-        const renderedBadge = badgeWrap.querySelector(".LI-badge-container");
+        const linkVisible =
+          originalLink.offsetParent !== null &&
+          window.getComputedStyle(originalLink).visibility !== "hidden" &&
+          window.getComputedStyle(originalLink).display !== "none";
   
-        if (!iframe && !renderedBadge) {
+        if (linkVisible) {
           fallback.style.display = "block";
         }
-      }, 3000);
+      }, 4000);
     });
-  </script>  
+  </script>
 </body>
 </html>
