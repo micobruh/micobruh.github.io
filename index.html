@@ -175,7 +175,9 @@
   
       if (!badge || !fallback) return;
   
+      // Check if LinkedIn badge loaded within a reasonable time
       setTimeout(function () {
+        // Check if badge has been rendered by LinkedIn's script
         const badgeText = badge.innerText.trim();
         const hasLinkedInRenderedContent =
           badge.children.length > 1 ||
@@ -184,12 +186,15 @@
           badge.querySelector('[class*="profile"]') ||
           badgeText.length > 50;
   
+        // Show fallback if badge didn't render (due to adblock, no JS, etc.)
         if (!hasLinkedInRenderedContent) {
           fallback.style.display = "block";
+          badge.style.display = "none";
         } else {
           fallback.style.display = "none";
+          badge.style.display = "block";
         }
-      }, 4000);
+      }, 3000);
     });
   </script>
 </body>
