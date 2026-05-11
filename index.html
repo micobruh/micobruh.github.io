@@ -10,7 +10,6 @@
   <meta property="og:type" content="website" />
   <title>Marco Mo | CV Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
-  <!-- LinkedIn badge script will be loaded dynamically -->
 </head>
 <body>
   <header class="site-header">
@@ -220,28 +219,12 @@
 
         <article class="contact-card contact-card--linkedin">
           <h3>LinkedIn profile</h3>
-          <div class="linkedin-badge-wrap">
-            <div class="badge-base LI-profile-badge"
-                 data-locale="en_US"
-                 data-size="medium"
-                 data-theme="light"
-                 data-type="VERTICAL"
-                 data-vanity="cheuk-lam-marco-mo"
-                 data-version="v1">
-              <a class="badge-base__link LI-simple-link"
-                 href="https://www.linkedin.com/in/cheuk-lam-marco-mo"
-                 target="_blank"
-                 rel="noopener"
-                 aria-label="View LinkedIn profile">
-              </a>
-            </div>
-            <p class="badge-note badge-fallback" id="linkedin-badge-fallback">
-              The LinkedIn badge could not be loaded here. You can still view my profile directly:
-              <a href="https://www.linkedin.com/in/cheuk-lam-marco-mo" target="_blank" rel="noopener">
-                linkedin.com/in/cheuk-lam-marco-mo
-              </a>
-            </p>
+          <div class="contact-visual contact-visual--linkedin" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
           </div>
+          <a class="button primary" href="https://www.linkedin.com/in/cheuk-lam-marco-mo" target="_blank" rel="noopener noreferrer">View LinkedIn</a>
         </article>
       </div>
     </section>
@@ -253,72 +236,6 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-
-  <script>
-    // LinkedIn badge with dynamic script loading
-    (function() {
-      // Load LinkedIn script dynamically
-      const script = document.createElement('script');
-      script.src = 'https://platform.linkedin.com/badges/js/profile.js';
-      script.async = true;
-      script.defer = true;
-      script.type = 'text/javascript';
-
-      // Add error handling
-      script.onerror = function() {
-        console.log('LinkedIn script failed to load');
-        const fallback = document.getElementById("linkedin-badge-fallback");
-        const badge = document.querySelector(".LI-profile-badge");
-        if (fallback && badge) {
-          fallback.style.display = "block";
-          badge.style.display = "none";
-        }
-      };
-
-      document.head.appendChild(script);
-
-      // Check badge loading after script loads
-      window.addEventListener("load", function () {
-        const badge = document.querySelector(".LI-profile-badge");
-        const fallback = document.getElementById("linkedin-badge-fallback");
-
-        if (!badge || !fallback) return;
-
-        // Check if LinkedIn badge loaded after script should have executed
-        setTimeout(function () {
-          const badgeText = badge.innerText.trim();
-          const hasChildren = badge.children.length > 0;
-          const hasImage = badge.querySelector("img") !== null;
-          const hasIframe = badge.querySelector("iframe") !== null;
-          const hasProfileClass = badge.querySelector('[class*="profile"]') !== null;
-          const hasContent = badgeText.length > 5;
-
-          const hasLinkedInRenderedContent = hasChildren || hasImage || hasIframe || hasProfileClass || hasContent;
-
-          console.log("LinkedIn badge debug:", {
-            hasChildren,
-            hasImage,
-            hasIframe,
-            hasProfileClass,
-            hasContent,
-            badgeText: badgeText.substring(0, 50),
-            totalLength: badgeText.length,
-            rendered: hasLinkedInRenderedContent
-          });
-
-          if (!hasLinkedInRenderedContent) {
-            console.log("Showing LinkedIn fallback");
-            fallback.style.display = "block";
-            badge.style.display = "none";
-          } else {
-            console.log("Hiding LinkedIn fallback - badge rendered");
-            fallback.style.display = "none";
-            badge.style.display = "block";
-          }
-        }, 6000); // Increased timeout since we're loading script dynamically
-      });
-    })();
   </script>
 </body>
 </html>

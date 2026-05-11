@@ -81,7 +81,6 @@ main {
 .profile-card,
 .cv-card,
 .contact-card,
-.linkedin-badge-wrap,
 .feature-card {
   background: rgba(255, 255, 255, 0.86);
   border: 1px solid var(--border);
@@ -346,29 +345,15 @@ h3 {
   height: 48px;
 }
 
+.contact-visual--linkedin svg {
+  color: #0077b5; /* LinkedIn blue */
+}
+
 .contact-card .button.primary {
   width: 100%;
 }
 
-.linkedin-badge-wrap {
-  width: 100%;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  min-height: 220px;
-}
 
-.badge-base.LI-profile-badge {
-  width: 100%;
-  max-width: 320px; /* Reasonable max width to prevent overflow */
-  margin: 0 auto; /* Center the badge */
-}
-
-.badge-note {
-  margin-top: 16px;
-  font-size: 0.92rem;
-}
 
 
 .footer {
@@ -416,17 +401,6 @@ h3 {
   .profile-card,
   .sidebar-card {
     align-items: flex-start;
-  }
-
-  .linkedin-badge-wrap {
-    border-radius: 22px;
-    padding: 16px;
-    min-height: 200px;
-  }
-
-  .badge-base.LI-profile-badge {
-    max-width: 280px; /* Slightly smaller for mobile */
-    margin: 0 auto;
   }
 
   .button {
