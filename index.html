@@ -10,7 +10,7 @@
   <meta property="og:type" content="website" />
   <title>Marco Mo | CV Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
-  <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+  <!-- LinkedIn badge script will be loaded dynamically -->
 </head>
 <body>
   <header class="site-header">
@@ -256,34 +256,69 @@
   </script>
 
   <script>
-    // Simple LinkedIn badge fallback logic
-    window.addEventListener("load", function () {
-      const badge = document.querySelector(".LI-profile-badge");
-      const fallback = document.getElementById("linkedin-badge-fallback");
+    // LinkedIn badge with dynamic script loading
+    (function() {
+      // Load LinkedIn script dynamically
+      const script = document.createElement('script');
+      script.src = 'https://platform.linkedin.com/badges/js/profile.js';
+      script.async = true;
+      script.defer = true;
+      script.type = 'text/javascript';
 
-      if (!badge || !fallback) return;
-
-      // Check if LinkedIn badge loaded after a reasonable time
-      setTimeout(function () {
-        const badgeText = badge.innerText.trim();
-        const hasLinkedInRenderedContent =
-          badge.children.length > 1 ||
-          badge.querySelector("img") ||
-          badge.querySelector("iframe") ||
-          badge.querySelector('[class*="profile"]') ||
-          badgeText.length > 20; // Lower threshold for detection
-
-        if (!hasLinkedInRenderedContent) {
-          // Show fallback if badge didn't render
+      // Add error handling
+      script.onerror = function() {
+        console.log('LinkedIn script failed to load');
+        const fallback = document.getElementById("linkedin-badge-fallback");
+        const badge = document.querySelector(".LI-profile-badge");
+        if (fallback && badge) {
           fallback.style.display = "block";
           badge.style.display = "none";
-        } else {
-          // Hide fallback if badge rendered successfully
-          fallback.style.display = "none";
-          badge.style.display = "block";
         }
-      }, 4000); // 4 seconds should be enough for most connections
-    });
+      };
+
+      document.head.appendChild(script);
+
+      // Check badge loading after script loads
+      window.addEventListener("load", function () {
+        const badge = document.querySelector(".LI-profile-badge");
+        const fallback = document.getElementById("linkedin-badge-fallback");
+
+        if (!badge || !fallback) return;
+
+        // Check if LinkedIn badge loaded after script should have executed
+        setTimeout(function () {
+          const badgeText = badge.innerText.trim();
+          const hasChildren = badge.children.length > 0;
+          const hasImage = badge.querySelector("img") !== null;
+          const hasIframe = badge.querySelector("iframe") !== null;
+          const hasProfileClass = badge.querySelector('[class*="profile"]') !== null;
+          const hasContent = badgeText.length > 5;
+
+          const hasLinkedInRenderedContent = hasChildren || hasImage || hasIframe || hasProfileClass || hasContent;
+
+          console.log("LinkedIn badge debug:", {
+            hasChildren,
+            hasImage,
+            hasIframe,
+            hasProfileClass,
+            hasContent,
+            badgeText: badgeText.substring(0, 50),
+            totalLength: badgeText.length,
+            rendered: hasLinkedInRenderedContent
+          });
+
+          if (!hasLinkedInRenderedContent) {
+            console.log("Showing LinkedIn fallback");
+            fallback.style.display = "block";
+            badge.style.display = "none";
+          } else {
+            console.log("Hiding LinkedIn fallback - badge rendered");
+            fallback.style.display = "none";
+            badge.style.display = "block";
+          }
+        }, 6000); // Increased timeout since we're loading script dynamically
+      });
+    })();
   </script>
 </body>
 </html>
