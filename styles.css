@@ -356,12 +356,21 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  min-height: 120px;
+  min-height: 220px;
+  overflow: hidden; /* Prevent overflow */
 }
 
 .badge-base.LI-profile-badge {
   width: 100%;
-  max-width: 400px;
+  max-width: 100%; /* Constrain to container width */
+  box-sizing: border-box;
+}
+
+.badge-base.LI-profile-badge iframe,
+.badge-base.LI-profile-badge * {
+  max-width: 100% !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
 }
 
 .badge-note {
@@ -420,7 +429,7 @@ h3 {
   .linkedin-badge-wrap {
     border-radius: 22px;
     padding: 16px;
-    min-height: 100px;
+    min-height: 200px;
   }
 
   .badge-base.LI-profile-badge {

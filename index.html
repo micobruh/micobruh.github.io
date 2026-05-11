@@ -223,9 +223,9 @@
           <div class="linkedin-badge-wrap">
             <div class="badge-base LI-profile-badge"
                  data-locale="en_US"
-                 data-size="large"
+                 data-size="medium"
                  data-theme="light"
-                 data-type="HORIZONTAL"
+                 data-type="VERTICAL"
                  data-vanity="cheuk-lam-marco-mo"
                  data-version="v1">
               <a class="badge-base__link LI-simple-link"
@@ -261,30 +261,44 @@
       // Detect mobile devices
       const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
+      // Check if LinkedIn script loaded
+      function checkLinkedInScriptLoaded() {
+        return typeof window.LI !== 'undefined' || document.querySelector('script[src*="platform.linkedin.com"]');
+      }
+
       if (isMobile) {
-        // On mobile, add a shorter timeout and more aggressive fallback
+        // On mobile, be more aggressive with fallback
         window.addEventListener("load", function () {
           const badge = document.querySelector(".LI-profile-badge");
           const fallback = document.getElementById("linkedin-badge-fallback");
 
           if (!badge || !fallback) return;
 
-          // Mobile: check after 2 seconds, then fallback after 4 seconds total
+          // Check if script loaded at all
+          if (!checkLinkedInScriptLoaded()) {
+            // Script didn't load, show fallback immediately
+            fallback.style.display = "block";
+            badge.style.display = "none";
+            return;
+          }
+
+          // Script loaded, but check if badge rendered
           setTimeout(function() {
-            const badgeText = badge.innerText.trim();
-            const hasContent = badge.children.length > 1 || badge.querySelector("img") || badgeText.length > 5;
+            const hasContent = badge.children.length > 1 ||
+                              badge.querySelector("img") ||
+                              badge.querySelector("iframe") ||
+                              badge.innerText.trim().length > 10;
 
             if (!hasContent) {
-              // Try one more time after another 2 seconds
-              setTimeout(function() {
-                const finalCheck = badge.children.length > 1 || badge.querySelector("img") || badge.innerText.trim().length > 5;
-                if (!finalCheck) {
-                  fallback.style.display = "block";
-                  badge.style.display = "none";
-                }
-              }, 2000);
+              // Badge didn't render, show fallback
+              fallback.style.display = "block";
+              badge.style.display = "none";
+            } else {
+              // Badge rendered successfully
+              fallback.style.display = "none";
+              badge.style.display = "block";
             }
-          }, 2000);
+          }, 3000); // 3 seconds for mobile
         });
       } else {
         // Desktop: use the enhanced checking logic
