@@ -356,11 +356,12 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  min-height: 220px;
+  min-height: 120px;
 }
 
 .badge-base.LI-profile-badge {
   width: 100%;
+  max-width: 400px;
 }
 
 .badge-note {
@@ -418,7 +419,12 @@ h3 {
 
   .linkedin-badge-wrap {
     border-radius: 22px;
-    padding: 24px;
+    padding: 16px;
+    min-height: 100px;
+  }
+
+  .badge-base.LI-profile-badge {
+    max-width: 100%;
   }
 
   .button {
