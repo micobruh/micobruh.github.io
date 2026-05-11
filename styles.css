@@ -181,7 +181,7 @@ h3 {
   justify-content: flex-start;
   background: linear-gradient(150deg, var(--surface-strong), #1d2941);
   color: #fff;
-  gap: 20px;
+  gap: 12px;
 }
 
 .avatar {
@@ -307,22 +307,32 @@ h3 {
 
 .contact-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 320px;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 320px);
   gap: 24px;
-  align-items: start;
+  align-items: stretch;
 }
 
-.contact-card h3,
-.linkedin-card h3 {
-  margin: 0 0 1rem;
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--text);
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.linkedin-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .linkedin-badge-wrap {
   width: 100%;
   padding: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 200px;
+}
 }
 
 .badge-fallback {
@@ -341,7 +351,7 @@ h3 {
   color: var(--muted);
 }
 
-@media (max-width: 850px) {
+@media (max-width: 900px) {
   .hero,
   .cv-grid,
   .split-section,
