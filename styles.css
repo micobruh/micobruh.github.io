@@ -305,6 +305,10 @@ h3 {
   font-size: 0.92rem;
 }
 
+.badge-fallback {
+  display: none;
+}
+
 .footer {
   max-width: 1120px;
   margin: 0 auto;
