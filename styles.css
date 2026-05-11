@@ -47,35 +47,20 @@ a { color: inherit; }
 .avatar {
   width: 120px;
   height: 120px;
-  max-width: 120px;
-  max-height: 120px;
-  min-width: 120px;
-  min-height: 120px;
+  flex: 0 0 120px;
 
   border-radius: 50%;
   overflow: hidden;
-  background: #e5e7eb;
-  flex: 0 0 120px;
 
-  display: block;
-  position: relative;
+  background-image: url("assets/profile.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border: 1px solid rgba(15, 23, 42, 0.08);
   box-sizing: border-box;
 }
 
-.avatar img {
-  position: absolute;
-  inset: 0;
-
-  width: 100% !important;
-  height: 100% !important;
-  max-width: none !important;
-  max-height: none !important;
-
-  object-fit: cover;
-  object-position: center;
-  display: block;
-  border-radius: 50%;
-}
 .brand {
   font-weight: 800;
   text-decoration: none;
@@ -380,12 +365,4 @@ h3 {
   .button {
     width: 100%;
   }
-}
-
-.hero .avatar img,
-.avatar > img {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  overflow: hidden;
 }
