@@ -176,19 +176,24 @@
 
   <script>
     window.addEventListener("load", function () {
-      const originalLink = document.getElementById("linkedin-original-link");
+      const badge = document.querySelector(".LI-profile-badge");
       const fallback = document.getElementById("linkedin-badge-fallback");
   
-      if (!originalLink || !fallback) return;
+      if (!badge || !fallback) return;
   
       setTimeout(function () {
-        const linkVisible =
-          originalLink.offsetParent !== null &&
-          window.getComputedStyle(originalLink).visibility !== "hidden" &&
-          window.getComputedStyle(originalLink).display !== "none";
+        const badgeText = badge.innerText.trim();
+        const hasLinkedInRenderedContent =
+          badge.children.length > 1 ||
+          badge.querySelector("img") ||
+          badge.querySelector("iframe") ||
+          badge.querySelector('[class*="profile"]') ||
+          badgeText.length > 50;
   
-        if (linkVisible) {
+        if (!hasLinkedInRenderedContent) {
           fallback.style.display = "block";
+        } else {
+          fallback.style.display = "none";
         }
       }, 4000);
     });
