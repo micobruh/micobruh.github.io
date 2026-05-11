@@ -1,9 +1,11 @@
 # Marco Mo CV Portfolio Website
 
-A static GitHub Pages website for hosting two public CV versions:
+A static GitHub Pages website for hosting four public CV versions:
 
 - AI/ML Engineer CV
 - Data Scientist CV
+- Data Engineer CV
+- Data Analyst CV
 
 ## Files
 
@@ -13,6 +15,9 @@ styles.css
 assets/
   marco-mo-cv-ai-ml-engineer.pdf
   marco-mo-cv-data-scientist.pdf
+  marco-mo-cv-data-engineer.pdf
+  marco-mo-cv-data-analyst.pdf
+  profile.jpg
 ```
 
 ## Publish on GitHub Pages
