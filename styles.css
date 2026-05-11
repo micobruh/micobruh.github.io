@@ -253,7 +253,7 @@ h3 {
 
 .cv-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 24px;
 }
 
@@ -295,9 +295,30 @@ h3 {
   gap: 16px;
 }
 
-.feature-list > div {
+.feature-card {
   padding: 24px;
-  box-shadow: none;
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+}
+
+.feature-actions {
+  margin-top: 16px;
+}
+
+.about-content {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.about-content p {
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+.about-content p:last-child {
+  margin-bottom: 0;
 }
 
 .contact-section {
