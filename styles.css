@@ -357,20 +357,12 @@ h3 {
   flex-direction: column;
   justify-content: flex-start;
   min-height: 220px;
-  overflow: hidden; /* Prevent overflow */
 }
 
 .badge-base.LI-profile-badge {
   width: 100%;
-  max-width: 100%; /* Constrain to container width */
-  box-sizing: border-box;
-}
-
-.badge-base.LI-profile-badge iframe,
-.badge-base.LI-profile-badge * {
-  max-width: 100% !important;
-  width: 100% !important;
-  box-sizing: border-box !important;
+  max-width: 320px; /* Reasonable max width to prevent overflow */
+  margin: 0 auto; /* Center the badge */
 }
 
 .badge-note {
@@ -433,7 +425,8 @@ h3 {
   }
 
   .badge-base.LI-profile-badge {
-    max-width: 100%;
+    max-width: 280px; /* Slightly smaller for mobile */
+    margin: 0 auto;
   }
 
   .button {

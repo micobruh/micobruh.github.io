@@ -256,100 +256,34 @@
   </script>
 
   <script>
-    // LinkedIn badge mobile compatibility enhancement
-    (function() {
-      // Detect mobile devices
-      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    // Simple LinkedIn badge fallback logic
+    window.addEventListener("load", function () {
+      const badge = document.querySelector(".LI-profile-badge");
+      const fallback = document.getElementById("linkedin-badge-fallback");
 
-      // Check if LinkedIn script loaded
-      function checkLinkedInScriptLoaded() {
-        return typeof window.LI !== 'undefined' || document.querySelector('script[src*="platform.linkedin.com"]');
-      }
+      if (!badge || !fallback) return;
 
-      if (isMobile) {
-        // On mobile, be more aggressive with fallback
-        window.addEventListener("load", function () {
-          const badge = document.querySelector(".LI-profile-badge");
-          const fallback = document.getElementById("linkedin-badge-fallback");
+      // Check if LinkedIn badge loaded after a reasonable time
+      setTimeout(function () {
+        const badgeText = badge.innerText.trim();
+        const hasLinkedInRenderedContent =
+          badge.children.length > 1 ||
+          badge.querySelector("img") ||
+          badge.querySelector("iframe") ||
+          badge.querySelector('[class*="profile"]') ||
+          badgeText.length > 20; // Lower threshold for detection
 
-          if (!badge || !fallback) return;
-
-          // Check if script loaded at all
-          if (!checkLinkedInScriptLoaded()) {
-            // Script didn't load, show fallback immediately
-            fallback.style.display = "block";
-            badge.style.display = "none";
-            return;
-          }
-
-          // Script loaded, but check if badge rendered
-          setTimeout(function() {
-            const hasContent = badge.children.length > 1 ||
-                              badge.querySelector("img") ||
-                              badge.querySelector("iframe") ||
-                              badge.innerText.trim().length > 10;
-
-            if (!hasContent) {
-              // Badge didn't render, show fallback
-              fallback.style.display = "block";
-              badge.style.display = "none";
-            } else {
-              // Badge rendered successfully
-              fallback.style.display = "none";
-              badge.style.display = "block";
-            }
-          }, 3000); // 3 seconds for mobile
-        });
-      } else {
-        // Desktop: use the enhanced checking logic
-        window.addEventListener("load", function () {
-          const badge = document.querySelector(".LI-profile-badge");
-          const fallback = document.getElementById("linkedin-badge-fallback");
-
-          if (!badge || !fallback) return;
-
-          function checkBadgeLoaded() {
-            const badgeText = badge.innerText.trim();
-            const hasLinkedInRenderedContent =
-              badge.children.length > 1 ||
-              badge.querySelector("img") ||
-              badge.querySelector("iframe") ||
-              badge.querySelector('[class*="profile"]') ||
-              badge.querySelector('.LI-profile-badge__content') ||
-              badgeText.length > 10;
-
-            return hasLinkedInRenderedContent;
-          }
-
-          if (checkBadgeLoaded()) {
-            fallback.style.display = "none";
-            badge.style.display = "block";
-            return;
-          }
-
-          const checkIntervals = [1000, 2000, 4000, 6000];
-          let currentCheck = 0;
-
-          function performCheck() {
-            if (checkBadgeLoaded()) {
-              fallback.style.display = "none";
-              badge.style.display = "block";
-              return;
-            }
-
-            currentCheck++;
-            if (currentCheck < checkIntervals.length) {
-              setTimeout(performCheck, checkIntervals[currentCheck]);
-            } else {
-              fallback.style.display = "block";
-              badge.style.display = "none";
-            }
-          }
-
-          setTimeout(performCheck, checkIntervals[0]);
-        });
-      }
-    })();
+        if (!hasLinkedInRenderedContent) {
+          // Show fallback if badge didn't render
+          fallback.style.display = "block";
+          badge.style.display = "none";
+        } else {
+          // Hide fallback if badge rendered successfully
+          fallback.style.display = "none";
+          badge.style.display = "block";
+        }
+      }, 4000); // 4 seconds should be enough for most connections
+    });
   </script>
 </body>
 </html>
