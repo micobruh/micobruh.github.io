@@ -56,6 +56,7 @@ a { color: inherit; }
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-color: #e5e7eb;
 
   border: 1px solid rgba(15, 23, 42, 0.08);
   box-sizing: border-box;
@@ -352,8 +353,14 @@ h3 {
   .contact-section {
     grid-template-columns: 1fr;
   }
-  .hero { min-height: auto; }
-  .profile-card { min-height: 360px; }
+
+  .hero {
+    min-height: auto;
+  }
+
+  .profile-card {
+    min-height: 360px;
+  }
 }
 
 @media (max-width: 560px) {
@@ -361,19 +368,29 @@ h3 {
     align-items: flex-start;
     flex-direction: column;
   }
+
   .nav-links {
     width: 100%;
     justify-content: space-between;
   }
-  main { padding-top: 28px; }
+
+  main {
+    padding-top: 28px;
+  }
+
   .hero-copy,
-  .profile-card,
   .cv-card,
   .contact-card,
+  .profile-card,
+  .sidebar-card {
+    align-items: flex-start;
+  }
+
   .linkedin-badge-wrap {
     border-radius: 22px;
     padding: 24px;
   }
+
   .button {
     width: 100%;
   }
