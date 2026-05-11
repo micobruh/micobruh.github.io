@@ -131,28 +131,18 @@
       </div>
 
       <div class="linkedin-badge-wrap" aria-label="LinkedIn public profile badge">
-        <div class="badge-base LI-profile-badge" 
-          data-locale="en_US" 
-          data-size="medium" 
-          data-theme="dark" 
-          data-type="VERTICAL" 
-          data-vanity="cheuk-lam-marco-mo" 
-          data-version="v1">
-          <a class="badge-base__link LI-simple-link" 
-            href="https://nl.linkedin.com/in/cheuk-lam-marco-mo?trk=profile-badge"
-            target="_blank"
-            rel="noopener 
-            noreferrer">
-            Cheuk Lam (Marco) Mo
-          </a>
+        <div class="badge-base LI-profile-badge"
+             data-locale="en_US"
+             data-size="medium"
+             data-theme="light"
+             data-type="VERTICAL"
+             data-vanity="cheuk-lam-marco-mo"
+             data-version="v1">
+          <a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/cheuk-lam-marco-mo/">Marco Mo on LinkedIn</a>
         </div>
-        <p id="linkedin-badge-fallback" class="linkedin-badge-fallback" hidden>
-          The LinkedIn profile badge may be hidden by your browser’s ad blocker or tracking protection.
-          You can still view my profile here:
-          <a href="https://www.linkedin.com/in/cheuk-lam-marco-mo/" target="_blank" rel="noopener noreferrer">
-            LinkedIn profile
-          </a>.
-        </p>        
+        <noscript>
+          <p class="badge-note">JavaScript is disabled, so the LinkedIn badge cannot load. Use the LinkedIn link above instead.</p>
+        </noscript>
       </div>
     </section>
   </main>
@@ -163,25 +153,6 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-  
-    window.addEventListener('load', function () {
-      const badge = document.getElementById('linkedin-badge');
-      const fallback = document.getElementById('linkedin-badge-fallback');
-  
-      setTimeout(function () {
-        const hasRenderedBadge =
-          badge &&
-          (
-            badge.querySelector('iframe') ||
-            badge.querySelector('object') ||
-            badge.offsetHeight > 120
-          );
-  
-        if (!hasRenderedBadge && fallback) {
-          fallback.hidden = false;
-        }
-      }, 2500);
-    });
   </script>
 </body>
 </html>
