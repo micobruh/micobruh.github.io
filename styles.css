@@ -286,6 +286,11 @@ h3 {
   border-radius: var(--radius);
 }
 
+.feature-card .chips span {
+  background: rgba(38, 87, 255, 0.10);
+  color: var(--accent);
+}
+
 .feature-actions {
   margin-top: 16px;
 }
