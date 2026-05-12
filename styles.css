@@ -311,7 +311,8 @@ h3 {
   border-radius: var(--radius);
 }
 
-.feature-card .chips span {
+.feature-card .chips span,
+.personal-grid .chips span {
   background: rgba(38, 87, 255, 0.10);
   color: var(--accent);
 }
@@ -334,13 +335,27 @@ h3 {
   border-radius: var(--radius);
 }
 
-.personal-card p {
-  color: var(--muted);
+.personal-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
-.personal-card .chips span {
-  background: rgba(38, 87, 255, 0.10);
-  color: var(--accent);
+.personal-mark {
+  width: 22px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--accent);
+}
+
+.personal-card p {
+  color: var(--muted);
 }
 
 .about-content {
