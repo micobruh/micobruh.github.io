@@ -295,6 +295,29 @@ h3 {
   margin-top: 16px;
 }
 
+.personal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.personal-card {
+  padding: 28px;
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+}
+
+.personal-card p {
+  color: var(--muted);
+}
+
+.personal-card .chips span {
+  background: rgba(38, 87, 255, 0.10);
+  color: var(--accent);
+}
+
 .about-content {
   max-width: 760px;
   margin: 0 auto;
@@ -372,6 +395,7 @@ h3 {
   .hero,
   .cv-grid,
   .split-section,
+  .personal-grid,
   .contact-grid {
     grid-template-columns: 1fr;
   }
