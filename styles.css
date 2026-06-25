@@ -321,6 +321,30 @@ h3 {
   margin-top: 16px;
 }
 
+.confidentiality-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 18px;
+  padding: 14px 16px;
+  border: 1px solid rgba(38, 87, 255, 0.16);
+  border-radius: 18px;
+  background: rgba(38, 87, 255, 0.055);
+}
+
+.confidentiality-note p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.confidentiality-mark {
+  flex: 0 0 auto;
+  line-height: 1.4;
+  font-size: 0.95rem;
+}
+
 .personal-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -414,15 +438,12 @@ h3 {
 }
 
 .contact-visual--linkedin svg {
-  color: #0077b5; /* LinkedIn blue */
+  color: #0077b5;
 }
 
 .contact-card .button.primary {
   width: 100%;
 }
-
-
-
 
 .footer {
   max-width: 1120px;

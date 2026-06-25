@@ -35,13 +35,13 @@ Data Analyst experienced in SQL, Python, process analysis, time-series data, KPI
 
 **Machine learning and statistics:** pandas, NumPy, scikit-learn, XGBoost, PyTorch, TensorFlow, Keras, classification, feature engineering, imbalanced learning, cross-validation, temporal validation, threshold optimization, time-series analysis, forecasting, NLP, active learning, reinforcement learning
 
-**LLM and applied AI:** LangChain, LangGraph, LangSmith, FastMCP, Model Context Protocol, RAG, embeddings, dense and sparse retrieval, BM25, reciprocal-rank fusion, reranking, Qdrant, Ollama, agentic workflows, tool calling, model routing, guardrails, prompt-injection protection
+**LLM and applied AI:** LangChain, LangGraph, LangSmith, FastMCP, Model Context Protocol, RAG, embeddings, dense and sparse retrieval, BM25, reciprocal-rank fusion, reranking, Qdrant, ChromaDB, Ollama, agentic workflows, tool calling, model routing, guardrails, prompt-injection protection
 
-**Data engineering and MLOps:** ETL, batch processing, data transformation, canonical data models, schema validation, data quality, deduplication, REST APIs, FastAPI, Pydantic, Alembic, MLflow, model registry, model serving, model monitoring, feature drift, Docker, Docker Compose, GitHub Actions, CI/CD, pytest, unittest
+**Data engineering and MLOps:** ETL, batch processing, data transformation, canonical data models, schema validation, data quality, deduplication, REST APIs, FastAPI, Pydantic, Alembic, MLflow, model registry, model serving, model monitoring, feature drift, Docker, Docker Compose, GitHub Actions, CI/CD, pytest, unittest, Spark
 
 **Databases and formats:** MySQL, PostgreSQL, SQLite, Qdrant, JSON, XML, CSV, fixed-width files, Parquet
 
-**Analytics and engineering tools:** process mining, KPI development, root-cause analysis, Excel, Plotly, Dash, Streamlit, Matplotlib, Git, GitHub, Linux, Jupyter, VS Code, LaTeX
+**Analytics and engineering tools:** process mining, KPI development, root-cause analysis, Excel, Plotly, Dash, Streamlit, Matplotlib, Git, GitHub, Linux, Jupyter, VS Code, LaTeX, Power BI
 
 ---
 
@@ -49,7 +49,7 @@ Data Analyst experienced in SQL, Python, process analysis, time-series data, KPI
 
 ### Junior AI Specialist — ADC Nederland
 
-Eindhoven, The Netherlands | Jun 2026 – Present *(fixed-term through Sep 2026)*
+Eindhoven, The Netherlands | Jun 2026 – Sep 2026
 
 - Developed four internal data and AI systems covering order ingestion, database access through MCP, an agentic chatbot, and production process mining.
 - Replaced a **5–10-minute manual database-entry process per order** with reusable source templates: approximately **30 minutes of initial product-mapping review**, followed by batch conversion of **7,000–8,000 orders to JSON in about 30 seconds**.

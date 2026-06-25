@@ -3,12 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Marco Mo - AI/ML Engineer and Data Scientist CV portfolio." />
+  <meta
+    name="description"
+    content="Marco Mo's portfolio in applied AI, machine learning, data engineering, analytics, and production-oriented software systems."
+  />
   <meta name="author" content="Marco Mo" />
-  <meta property="og:title" content="Marco Mo - CV Portfolio" />
-  <meta property="og:description" content="Choose the AI/ML Engineer CV or Data Scientist CV." />
+  <meta property="og:title" content="Marco Mo - AI & Data Portfolio" />
+  <meta
+    property="og:description"
+    content="Explore Marco Mo's experience, selected projects, and downloadable CV profiles across applied AI and data."
+  />
   <meta property="og:type" content="website" />
-  <title>Marco Mo | CV Portfolio</title>
+  <title>Marco Mo | AI & Data Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -18,7 +24,7 @@
       <div class="nav-links">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
-        <a href="#cv">CVs</a>        
+        <a href="#cv">CVs</a>
         <a href="#personal">Soft Skills & Hobbies</a>
         <a href="#contact">Contact</a>
       </div>
@@ -28,17 +34,20 @@
   <main id="top">
     <section class="hero">
       <div class="hero-copy">
-        <p class="eyebrow">AI/ML Engineer · Data Scientist · Data Engineer · Data Analyst</p>
+        <p class="eyebrow">Applied AI · Machine Learning · Data Engineering · Analytics</p>
         <h1>Hi, I'm Marco Mo.</h1>
         <p class="lead">
-          I build production-oriented ML and AI systems, combining data science, MLOps, and LLM applications to solve real-world problems in fraud detection, NLP, time-series analysis, and safe reinforcement learning.
+          I build reliable AI and data systems from ingestion and analysis through model deployment,
+          APIs, monitoring, and user-facing tools. My work combines machine learning, data engineering,
+          LLM applications, and operational analytics to solve practical business problems.
         </p>
         <div class="hero-actions" aria-label="Primary actions">
-          <a class="button primary" href="#cv">Choose a CV</a>
+          <a class="button primary" href="#cv">Explore CV profiles</a>
           <a class="button secondary" href="https://www.linkedin.com/in/cheuk-lam-marco-mo/" target="_blank" rel="noopener noreferrer">View LinkedIn</a>
           <a class="button secondary" href="https://github.com/micobruh" target="_blank" rel="noopener noreferrer">View GitHub</a>
         </div>
       </div>
+
       <aside class="profile-card" aria-label="Profile summary">
         <div class="avatar" role="img" aria-label="Portrait of Marco Mo"></div>
         <h2>Marco Mo</h2>
@@ -47,11 +56,11 @@
           <span>Python</span>
           <span>SQL</span>
           <span>PyTorch</span>
-          <span>Docker</span>
           <span>Spark</span>
           <span>FastAPI</span>
           <span>Power BI</span>
-          <span>LangChain</span>
+          <span>LangGraph</span>
+          <span>ChromaDB</span>
         </div>
       </aside>
     </section>
@@ -61,61 +70,95 @@
         <p class="eyebrow">About me</p>
         <h2>Background & expertise</h2>
       </div>
+
       <div class="about-content">
         <p>
-          I'm a Master's student in Data Science & Artificial Intelligence at Eindhoven University of Technology, 
-          with a Bachelor's degree in Data Science from TU/e and Tilburg University. Currently pursuing my thesis 
-          on "Reward-Free Safe Reinforcement Learning Exploration using Different Entropy Measures."
+          My recent professional experience includes developing internal data and AI systems for order
+          ingestion, database access, agentic assistance, and production process analysis. I combine
+          automation with validation, privacy controls, human review, and maintainable software interfaces.
         </p>
         <p>
-          With hands-on experience in machine learning, data engineering, and AI systems, I specialize in building 
-          end-to-end solutions for real-world problems. My work spans fraud detection pipelines, NLP applications, 
-          time-series analysis, and LLM-based systems, with a focus on production-ready implementations using modern 
-          MLOps practices.
+          I hold an MSc in Data Science and Artificial Intelligence from Eindhoven University of
+          Technology and a BSc in Data Science from TU/e and Tilburg University. My academic work
+          includes safe reinforcement learning, NLP classification, time-series modelling, and
+          graph-data systems.
         </p>
         <p>
-          Based in Eindhoven, The Netherlands, I combine academic rigor with practical engineering to deliver 
-          scalable, reliable AI solutions that drive business impact.
+          Based in Eindhoven, I enjoy turning complex technical problems into reproducible workflows,
+          measurable insights, and practical tools for both technical and non-technical users.
         </p>
       </div>
     </section>
 
     <section id="projects" class="section split-section">
       <div>
-        <p class="eyebrow">Featured projects</p>
+        <p class="eyebrow">Selected work</p>
         <h2>What this portfolio highlights</h2>
       </div>
+
       <div class="feature-list">
         <div class="feature-card">
-          <h3>Production-oriented ML</h3>
-          <p>Reusable pipelines, evaluation workflows, model serving, reproducibility, and CI/CD practices.</p>
+          <h3>Professional data and AI systems</h3>
+          <p>
+            Multi-format ingestion, typed APIs, database tools, agentic workflows, privacy-aware access,
+            human review, testing, and operational process analysis.
+          </p>
           <div class="chips">
             <span>Python</span>
-            <span>Data Streaming</span>
+            <span>SQL</span>
+            <span>FastAPI</span>
+            <span>LangGraph</span>
+            <span>MCP</span>
+            <span>Pydantic</span>
+            <span>PostgreSQL</span>
+            <span>Docker</span>
+          </div>
+          <div class="confidentiality-note" role="note" aria-label="Confidentiality notice">
+            <span class="confidentiality-mark" aria-hidden="true">🔒</span>
+            <p>
+              This work was completed in a professional environment. Source code and internal
+              implementation details are not publicly available due to company confidentiality requirements.
+            </p>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <h3>Machine learning and MLOps</h3>
+          <p>
+            Reproducible experimentation, leakage-aware validation, threshold optimisation, model
+            serving, monitoring, containerisation, and CI/CD.
+          </p>
+          <div class="chips">
+            <span>Python</span>
             <span>XGBoost</span>
+            <span>scikit-learn</span>
             <span>MLflow</span>
             <span>FastAPI</span>
             <span>Docker</span>
             <span>GitHub Actions</span>
             <span>Dash</span>
-          </div>          
+          </div>
           <div class="feature-actions">
             <a class="button secondary" href="https://github.com/micobruh/fraud-detection-mlops/" target="_blank" rel="noopener noreferrer">View Fraud Detection Pipeline</a>
           </div>
         </div>
+
         <div class="feature-card">
-          <h3>LLM and RAG systems</h3>
-          <p>Document ingestion, chunking, hybrid retrieval, local LLM querying, and offline deployment.</p>
+          <h3>LLM and retrieval systems</h3>
+          <p>
+            Local document indexing, hybrid retrieval, reranking, grounded generation, agentic tool use,
+            and privacy-conscious deployment.
+          </p>
           <div class="chips">
-            <span>Python</span>
-            <span>Retrieval Augmented Generation (RAG)</span>
+            <span>RAG</span>
             <span>LangChain</span>
             <span>Ollama</span>
             <span>ChromaDB</span>
             <span>Qdrant</span>
             <span>BM25</span>
+            <span>Reranking</span>
             <span>Streamlit</span>
-          </div>              
+          </div>
           <div class="feature-actions">
             <a class="button secondary" href="https://github.com/micobruh/contract-copilot/" target="_blank" rel="noopener noreferrer">View Contract Copilot</a>
           </div>
@@ -125,22 +168,26 @@
 
     <section id="cv" class="section">
       <div class="section-heading">
-        <p class="eyebrow">Download my role-specific CV</p>
-        <h2>Choose the version that matches the role</h2>
-        <p>Recruiters and collaborators can view or download the most relevant version directly from this page.</p>
+        <p class="eyebrow">CV library</p>
+        <h2>Choose the profile closest to the opportunity</h2>
+        <p>
+          Each version contains the same core background and experience, while emphasizing a different
+          part of my work. The PDF filenames and download paths remain unchanged.
+        </p>
       </div>
 
       <div class="cv-grid">
         <article class="cv-card">
-          <div class="card-topline">Version 1</div>
-          <h3>AI/ML Engineer CV</h3>
+          <div class="card-topline">Profile 1</div>
+          <h3>AI & Machine Learning</h3>
           <p>
-            Focused on end-to-end ML systems, scalable training and data pipelines, model deployment, RAG systems, and LLM applications.
+            Emphasizes production ML, agentic applications, retrieval systems, model deployment,
+            monitoring, testing, and reliable AI integration.
           </p>
           <ul>
-            <li>Fraud detection ML pipeline with 600k transactions and 400+ features</li>
-            <li>Offline RAG system for 400+ legal documents</li>
-            <li>MLOps stack: MLflow, Docker, GitHub Actions, FastAPI</li>
+            <li>Agentic LangGraph workflows with role-aware tool access and guardrails</li>
+            <li>Offline RAG over 400+ legal documents using hybrid retrieval</li>
+            <li>MLflow, FastAPI, Docker, CI/CD, model serving, and monitoring</li>
           </ul>
           <div class="card-actions">
             <a class="button primary" href="assets/marco-mo-cv-ai-ml-engineer.pdf" target="_blank" rel="noopener noreferrer">View CV</a>
@@ -149,15 +196,16 @@
         </article>
 
         <article class="cv-card">
-          <div class="card-topline">Version 2</div>
-          <h3>Data Scientist CV</h3>
+          <div class="card-topline">Profile 2</div>
+          <h3>Data Science & Modelling</h3>
           <p>
-            Focused on machine learning, NLP, time-series analysis, high-dimensional data, statistical validation, and communicating analytical insights.
+            Emphasizes predictive modelling, experimental design, NLP, time-series analysis, validation,
+            feature engineering, and interpretable evaluation.
           </p>
           <ul>
-            <li>Fraud detection and leakage-aware validation</li>
-            <li>NLP classification for health platform data</li>
-            <li>Dashboards and insights for energy forecasting projects</li>
+            <li>Fraud modelling on 600,000 transactions and 400+ features</li>
+            <li>Safe reinforcement-learning research with fixed-seed evaluation</li>
+            <li>Active-learning NLP classification with imbalanced-data methods</li>
           </ul>
           <div class="card-actions">
             <a class="button primary" href="assets/marco-mo-cv-data-scientist.pdf" target="_blank" rel="noopener noreferrer">View CV</a>
@@ -166,15 +214,16 @@
         </article>
 
         <article class="cv-card">
-          <div class="card-topline">Version 3</div>
-          <h3>Data Engineer CV</h3>
+          <div class="card-topline">Profile 3</div>
+          <h3>Data Platforms & Engineering</h3>
           <p>
-            Focused on designing and optimizing data pipelines, distributed processing, data validation, and system performance optimization.
+            Emphasizes ingestion, transformation, validation, APIs, databases, distributed processing,
+            data quality, migrations, and system performance.
           </p>
           <ul>
-            <li>Database optimization and query performance (C++ graph database)</li>
-            <li>End-to-end data pipelines for fraud detection</li>
-            <li>Distributed processing with Spark and MLflow</li>
+            <li>Converted XML, JSON, CSV, and fixed-width order data</li>
+            <li>Built 67 structured database and API tools with scoped access</li>
+            <li>Python, SQL, Spark, FastAPI, PostgreSQL, MySQL, and Docker</li>
           </ul>
           <div class="card-actions">
             <a class="button primary" href="assets/marco-mo-cv-data-engineer.pdf" target="_blank" rel="noopener noreferrer">View CV</a>
@@ -183,15 +232,16 @@
         </article>
 
         <article class="cv-card">
-          <div class="card-topline">Version 4</div>
-          <h3>Data Analyst CV</h3>
+          <div class="card-topline">Profile 4</div>
+          <h3>Analytics & Decision Support</h3>
           <p>
-            Focused on transforming complex datasets into actionable insights, analytical pipelines, and data-driven decision-making.
+            Emphasizes SQL analysis, KPI design, dashboards, process analysis, data quality, reporting,
+            and communicating actionable operational insights.
           </p>
           <ul>
-            <li>Fraud pattern analysis and risk indicators</li>
-            <li>NLP-based behavioral pattern identification</li>
-            <li>Time-series analysis and energy optimization insights</li>
+            <li>Production process analysis using wait, rework, workload, and volume KPIs</li>
+            <li>Time-series energy analysis with interactive dashboards</li>
+            <li>Power BI, Plotly, Dash, Python, SQL, and Excel</li>
           </ul>
           <div class="card-actions">
             <a class="button primary" href="assets/marco-mo-cv-data-analyst.pdf" target="_blank" rel="noopener noreferrer">View CV</a>
@@ -215,15 +265,15 @@
           </div>
           <h3>How I collaborate</h3>
           <p>
-            I communicate clearly across technical and non-technical teams, enjoy breaking down complex problems, and learn independently when a project requires new tools or methods.
+            I communicate clearly across technical and non-technical teams, break broad problems into
+            manageable components, and learn new tools independently when a project requires them.
           </p>
-
           <div class="chips">
             <span>Communication</span>
             <span>Problem solving</span>
             <span>Adaptability</span>
-            <span>Team player</span>            
-            <span>Self-directed learning</span>            
+            <span>Collaboration</span>
+            <span>Self-directed learning</span>
           </div>
         </article>
 
@@ -234,7 +284,8 @@
           </div>
           <h3>What keeps me curious</h3>
           <p>
-            Outside work, I enjoy hobbies that keep me creative, disciplined, and curious, from drawing and piano to fitness, cooking, and travel.
+            Outside work, I enjoy activities that keep me creative, disciplined, and curious, including
+            drawing, piano, fitness, cooking, and travel.
           </p>
           <div class="chips">
             <span>Drawing</span>
@@ -251,7 +302,10 @@
       <div class="section-heading">
         <p class="eyebrow">Get in touch</p>
         <h2>Connect with me</h2>
-        <p>For the complete profile, use LinkedIn or GitHub. For applications, choose the CV version above that best matches the position.</p>
+        <p>
+          For my complete background, visit LinkedIn or GitHub. For applications, select the CV profile
+          that most closely matches the opportunity.
+        </p>
       </div>
 
       <div class="contact-grid">
@@ -291,7 +345,7 @@
   </main>
 
   <footer class="footer">
-    <p>© <span id="year"></span> Marco Mo. Built for GitHub Pages. Last updated: May 2026.</p>
+    <p>© <span id="year"></span> Marco Mo. Built for GitHub Pages. Last updated: June 2026.</p>
   </footer>
 
   <script>
