@@ -31,17 +31,21 @@ Data Analyst experienced in SQL, Python, process analysis, time-series data, KPI
 
 ## Technical Skills
 
-**Programming:** Python, SQL, C++, R, Java, Bash
+**Programming:** Python, SQL, C++, Java, R, Bash
 
-**Machine learning and statistics:** pandas, NumPy, scikit-learn, XGBoost, PyTorch, TensorFlow, Keras, classification, feature engineering, imbalanced learning, cross-validation, temporal validation, threshold optimization, time-series analysis, forecasting, NLP, active learning, reinforcement learning
+**AI engineering and agentic systems:** Codex, LangChain, LangGraph, Model Context Protocol (MCP), FastMCP, agentic workflows, multi-agent systems, tool calling, structured outputs, prompt engineering, evaluation pipelines, guardrails, human-in-the-loop workflows
 
-**LLM and applied AI:** LangChain, LangGraph, LangSmith, FastMCP, Model Context Protocol, RAG, embeddings, dense and sparse retrieval, BM25, reciprocal-rank fusion, reranking, Qdrant, ChromaDB, Ollama, agentic workflows, tool calling, model routing, guardrails, prompt-injection protection
+**LLM and retrieval:** RAG, embeddings, BM25, dense retrieval, reciprocal-rank fusion, reranking, Qdrant, ChromaDB, Ollama
 
-**Data engineering and MLOps:** ETL, batch processing, data transformation, canonical data models, schema validation, data quality, deduplication, REST APIs, FastAPI, Pydantic, Alembic, MLflow, model registry, model serving, model monitoring, feature drift, Docker, Docker Compose, GitHub Actions, CI/CD, pytest, unittest, Spark
+**Machine learning:** pandas, NumPy, scikit-learn, XGBoost, PyTorch, TensorFlow, Keras, feature engineering, classification, imbalanced learning, cross-validation, time-series analysis, forecasting, NLP, reinforcement learning
 
-**Databases and formats:** MySQL, PostgreSQL, SQLite, Qdrant, JSON, XML, CSV, fixed-width files, Parquet
+**Data engineering and MLOps:** ETL, batch processing, schema validation, data quality, deduplication, REST APIs, FastAPI, Pydantic, Alembic, MLflow, model serving, model monitoring, Docker, Docker Compose, GitHub Actions, CI/CD, pytest, unittest
 
-**Analytics and engineering tools:** process mining, KPI development, root-cause analysis, Excel, Plotly, Dash, Streamlit, Matplotlib, Git, GitHub, Linux, Jupyter, VS Code, LaTeX, Power BI
+**Workflow and automation:** Playwright, BeautifulSoup, requests, Markdown, python-docx, PDF generation, workflow orchestration, stateful pipelines, quality gates, configuration-driven systems
+
+**Databases:** MySQL, PostgreSQL, SQLite, Qdrant, JSON, XML, CSV, Parquet, fixed-width files
+
+**Analytics:** process mining, Power BI, Plotly, Dash, Streamlit, Matplotlib, Git, GitHub, Linux, Jupyter, VS Code, LaTeX
 
 ---
 
@@ -126,6 +130,19 @@ Eindhoven, The Netherlands | Sep 2021 – Jul 2023
 - Delivered Parquet outputs and an interactive dashboard with product, component, and transition filters; used temporal case-level splits for optional predictive modeling.
 
 **Technologies:** Python, SQL, MySQL, pandas, Parquet, process mining, temporal validation, KPI design, operational analytics, Docker
+
+### AI Job Search and Application Preparation Pipeline
+
+*Agentic AI, job intelligence, document automation, human-in-the-loop workflow*
+
+- Built a local-first Codex workflow that scans direct company career sites and marketplace leads, validates Dutch IND sponsorship eligibility, filters unsuitable roles, and prepares application packages without automatically applying or contacting recruiters.
+- Implemented deterministic screening for sponsor matching, Netherlands location, data/AI relevance, seniority, visa denial, internships, part-time roles, Dutch fluency, experience requirements, enrollment requirements, and security or clearance restrictions.
+- Designed a SQLite-backed workflow state layer for sponsors, companies, jobs, evaluations, scan runs, match reviews, Telegram deliveries, feedback, deduplication, source health, retries, and pruning.
+- Combined writer and isolated reviewer agents in an iterative quality loop that generates tailored CV, motivation letter, and outreach Markdown, then validates ATS-style score, truthfulness, tone, question coverage, layout, one-page PDF rendering, and formatting before delivery.
+- On one measured run, scanned **100 configured sources**, rejected **120 jobs**, delivered **5 qualifying jobs**, and generated **10 tailored PDFs** for human review in approximately **1 hour**.
+- Delivered accepted jobs through Telegram with match rationale, remaining gaps, final document scores, job summary, source URL, and generated CV/letter PDFs while keeping final application approval manual.
+
+**Technologies:** Python, SQLite, Playwright, BeautifulSoup, requests, YAML, Codex, agentic workflows, prompt engineering, Telegram Bot API, Markdown, DOCX, PDF rendering, Ollama, Qwen, unittest
 
 ### Energy Disaggregation and Consumption Analytics — Honors Academy / SimEnergy
 
