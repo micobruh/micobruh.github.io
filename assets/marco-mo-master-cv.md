@@ -71,7 +71,7 @@ Eindhoven, The Netherlands | Sep 2021 – Jul 2025
 
 - Supported **80+ students per week** in Python, pandas, SQL, introductory machine learning, mathematics, and analytical reasoning through labs, project meetings, and question-driven coaching.
 - Diagnosed errors in code, methods, and interpretation and guided students toward independent solutions.
-- Coached teams on problem scoping, method selection, result interpretation, and communication, and graded assignments and examinations using consistent criteria.
+- Coached teams on problem scoping, method selection, communication, and agile/data science frameworks (SCRUM, CRISP-DM), while grading assignments with consistent criteria.
 
 ### Software Technical Lead — Student Team SimEnergy, Eindhoven University of Technology
 
