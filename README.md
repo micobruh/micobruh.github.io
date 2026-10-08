@@ -13,10 +13,10 @@ A static GitHub Pages website for hosting four public CV versions:
 index.html
 styles.css
 assets/
-  marco-mo-cv-ai-ml-engineer.pdf
-  marco-mo-cv-data-scientist.pdf
-  marco-mo-cv-data-engineer.pdf
-  marco-mo-cv-data-analyst.pdf
+  Marco_Mo_CV_AI_ML_Engineer.pdf
+  Marco_Mo_CV_Data_Scientist.pdf
+  Marco_Mo_CV_Data_Engineer.pdf
+  Marco_Mo_CV_Data_Analyst.pdf
   profile.jpg
 ```
 
